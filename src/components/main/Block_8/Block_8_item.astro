@@ -1,0 +1,31 @@
+---
+import { Image } from "astro:assets";
+const { img1, title, img2 } = Astro.props;
+---
+
+<div class="relative w-[360px] h-[240px] group">
+  <div class="absolute z-20 inset-0 rounded-[20px]">
+    <a href="#"
+      ><Image class="w-full h-full object-contain" src={img1} alt="error" /></a
+    >
+  </div>
+  <div
+    class="absolute z-30 w-full h-full bg-gradient-to-b from-[#000000]/70 from-10% to-transparent to-100 rounded-[20px]"
+  >
+    <div class="p-[20px] flex flex-col justify-between h-full">
+      <div class="text-white flex flex-col gap-[10px]">
+        <div
+          class="text-white/60 text-[12px] leading-[16px] tracking-[3px] uppercase"
+        >
+          История успеха
+        </div>
+        <div>{title}</div>
+      </div>
+      <div><Image src={img2} alt="error" /></div>
+    </div>
+  </div>
+  <div
+    class="absolute inset-0 z-10 bg-[#8C26EA]/40 transition-all duration-300 opacity-0 group-hover:scale-105 group-hover:opacity-100 rounded-[20px]"
+  >
+  </div>
+</div>

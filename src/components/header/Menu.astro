@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+import Logo from "../../assets/header/Logo.svg";
+import arrow from "../../assets/header/arrow.svg";
+---
+
+<div class="bg-[#FFFFFF]">
+    <div
+        class="max-w-[1224px] mx-auto flex px-[48px] gap-[64px] h-[80px] items-center"
+    >
+        <div>
+            <Image src={Logo} width="123" height="24" alt="error" />
+        </div>
+        <div class="flex gap-[40px] text-[#0D0628] font-medium text-[15px]">
+            <div class="hover:text-[#000000]/50 transition-colors duration-300">Продукты</div>
+            <div class="hover:text-[#000000]/50 transition-colors duration-300">События</div>
+            <div class="hover:text-[#000000]/50 transition-colors duration-300">Партнерам</div>
+            <div class="hover:text-[#000000]/50 transition-colors duration-300">Карьера</div>
+            <div class="flex gap-[8px]">
+                <div>Пресс-центр</div>
+                <Image src={arrow} alt="error" />
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets";
+import ok from "../../../assets/main/block_7_ok.svg";
+const {  text, title } = Astro.props;
+---
+
+
+
+
+<div class="flex gap-[12px]">
+
+    <div class=" flex-shrink-0 w-[24px] h-[24px]"> <Image class="w-full h-full object-contain"  src={ok}  alt="" /></div>
+    <div>
+        <div class="text-[#0D0628] text-[20px] font-semibold leading-[28px]">{title}</div>
+        <div class="text-[#0D0628]/80 text-[16px]  leading-[24px]">{text}</div>
+    </div>
+</div>
