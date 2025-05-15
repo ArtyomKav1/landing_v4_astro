@@ -1,10 +1,16 @@
 @import "tailwindcss";
 
+
+body{
+  font-family: "Open Sans", sans-serif
+}
+
 @layer components {
   .circle-schadow {
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
   }
   @theme {
+    --font-Playfair: "Playfair Display", sans-serif !important; 
     --animate-wiggle: wiggle 10s ease-in-out infinite;
     @keyframes wiggle {
       0% {

@@ -17,17 +17,20 @@ export const validationSchema = Yup.object().shape({
     .email("Некорректный email")
     .required("Обязательное поле"),
   number: Yup.string()
-    .min(5, "Минимум 5 символов")
-    .required("Обязательное поле"),
+    .matches(/^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/, 'Введите корректный номер')
+    .required('Введите номер телефона'),
 });
 
 export const initialValues = {
   name: "",
   company: "",
-  number: "",
   email: "",
+  number: "",
   check: false
 };
+
+
+
 
 
 

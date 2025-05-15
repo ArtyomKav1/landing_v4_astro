@@ -55,7 +55,7 @@ const titleMass = [
   "Проверка юридических лиц",
   "Проверка физических лиц",
   "Судебное и внесудебное банкротство",
-  "Готовые           факторы риска",
+  "Готовые факторы риска",
 ];
 
 export const Slider = () => {
@@ -69,7 +69,7 @@ export const Slider = () => {
             <div 
               key={ind}
               onClick={() => swiperRef.current?.slideTo(ind)}
-              class='relative overflow-hidden h-[70px]'
+              class='relative overflow-hidden h-[70px]  cursor-pointer'
             >
                 <div class={`px-[16px] pt-[12px] pb-[18px] transition-all duration-300  text-[14px] w-[196px]  text-center ${ind === activeIndex && "text-[#8C26EA]"} ${ind !== activeIndex && "text-[#5F5B70] hover:text-black "}`}>
                     {item}

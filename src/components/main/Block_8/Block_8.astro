@@ -13,17 +13,30 @@ import Item from "./Block_8_item.astro";
 ---
 
 <div class="bg-[#FFFFFF]">
-  <div class="bg-[#FFFFFF] px-[48px] py-[88px] max-w-[1224px] mx-auto">
+  <div
+    class="bg-[#FFFFFF] px-[48px] max-sm:px-[20px] py-[88px] max-w-[1224px] mx-auto"
+  >
     <div
       class="text-[#0D0628] text-[32px] text-center pb-[48px] leading-[40px]"
     >
       Кейсы клиентов
     </div>
     <div class="flex gap-[24px] justify-center">
-      <Item img1={img1_1} img2={img1_2} title={"CRM как система учета рабочего времени в юридическом консалтинге"}/>
-      <Item img1={img2_1} img2={img2_2} title={"Как в 2,5 раза ускорить обработку обращений надзорных органов"}/>
-      <Item img1={img3_1} img2 ={img3_2} title={"Как контролировать IP-активы"}/>
-
+      <Item
+        img1={img1_1}
+        img2={img1_2}
+        title={"CRM как система учета рабочего времени в юридическом консалтинге"}
+      />
+      <Item
+        img1={img2_1}
+        img2={img2_2}
+        title={"Как в 2,5 раза ускорить обработку обращений надзорных органов"}
+      />
+      <Item
+        img1={img3_1}
+        img2={img3_2}
+        title={"Как контролировать IP-активы"}
+      />
     </div>
   </div>
 </div>

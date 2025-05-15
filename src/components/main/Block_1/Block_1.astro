@@ -4,14 +4,16 @@ import Block_1_item from "./Block_1_item.astro";
 import { Btn__customLong } from "../../UI/Btn__customLong";
 ---
 
-<div class="px-[48px] py-[88px] flex flex-col max-w-[1224px] mx-auto">
+<div
+  class="px-[48px] max-sm:px-[20px] py-[88px] flex flex-col max-w-[1224px] mx-auto"
+>
   <div
     class="text-[#0D0628] text-[32px] font-semibold text-center leading-[40px] pb-[48px]"
   >
     Качество, скорость и полнота данных — главные преимущества сервиса
   </div>
 
-  <div class="flex gap-[24px]">
+  <div class="flex gap-[24px] max-md:flex-col">
     <div class="flex flex-col gap-[24px] flex-1">
       <Block_1_item
         H1={"100%"}
