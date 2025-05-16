@@ -10,12 +10,24 @@ import { Slider } from "./Slider";
     <div>
       <Image src={Logo_BigData} alt="" />
     </div>
-    <div class="flex gap-[32px] font-medium text-[15px] text-[#8C26EA]">
-      <div class="hover:text-[#8C26EA]/50 transition-colors duration-300">Преимущества</div>
-      <div class="hover:text-[#8C26EA]/50 transition-colors duration-300">Отрасли</div>
-      <div class="hover:text-[#8C26EA]/50 transition-colors duration-300">Как работает</div>
-      <div class="hover:text-[#8C26EA]/50 transition-colors duration-300">Источники</div>
-      <div class="hover:text-[#8C26EA]/50 transition-colors duration-300">Кейсы</div>
+    <div
+      class="flex gap-[32px] font-medium text-[15px] text-[#8C26EA] max-md:hidden"
+    >
+      <div class="hover:text-[#8C26EA]/50 transition-colors duration-300">
+        Преимущества
+      </div>
+      <div class="hover:text-[#8C26EA]/50 transition-colors duration-300">
+        Отрасли
+      </div>
+      <div class="hover:text-[#8C26EA]/50 transition-colors duration-300">
+        Как работает
+      </div>
+      <div class="hover:text-[#8C26EA]/50 transition-colors duration-300">
+        Источники
+      </div>
+      <div class="hover:text-[#8C26EA]/50 transition-colors duration-300">
+        Кейсы
+      </div>
     </div>
   </div>
   <Slider client:load />

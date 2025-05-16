@@ -1,11 +1,9 @@
 ---
-import Menu from "./Menu.astro";
+import { Menu } from "./Menu.tsx";
 import Header_swith from "./Header_swith.astro";
-
 ---
 
-
 <div>
-    <Menu/>
-    <Header_swith/>
+    <Menu client:load />
+    <Header_swith />
 </div>

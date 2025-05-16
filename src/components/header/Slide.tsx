@@ -2,7 +2,7 @@ import { Btn_custom } from "../UI/Btn_custom.js";
 export const Slide = (props: { title: string, text: string, img: string, main: boolean, soon: boolean, }) => {
   return (
     <>
-      <div className="px-[48px] flex gap-[24px] h-[514px] items-center">
+      <div className="px-[48px] max-md:flex-col-reverse flex gap-[24px] h-[514px] items-center">
         <div className="flex flex-1 flex-col gap-[40px] pr-[48px]">
           <div className="flex flex-col gap-[16px]">
             <div className="text-[38px] text-[#0D0628] font-semibold leading-[46px]">
