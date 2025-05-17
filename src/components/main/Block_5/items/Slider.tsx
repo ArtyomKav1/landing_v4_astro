@@ -5,8 +5,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Slide } from "./Slide";
-import React, { useRef, useState } from "react";
-
+import { useRef, useState } from "react";
+import type { Swiper as SwiperType } from "swiper";
 const limass = [
   [
     "Участие в арбитражных делах и делах судов общей юрисдикции",
@@ -59,22 +59,22 @@ const titleMass = [
 ];
 
 export const Slider = () => {
-  const swiperRef = useRef(null);
-  const [activeIndex, setActiveIndex] = useState(0);
+  const swiperRef = useRef<SwiperType | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number>(0);
   return (
     <>
       <div className="relative h-full">
-        <div class="flex justify-between items-center border-b-[2px] border-black/10">
+        <div className="flex justify-between items-center border-b-[2px] border-black/10 max-m:hidden">
           {titleMass.map((item, ind) => (
             <div 
               key={ind}
               onClick={() => swiperRef.current?.slideTo(ind)}
-              class='relative overflow-hidden h-[70px]  cursor-pointer'
+              className='relative overflow-hidden h-[70px]  cursor-pointer w'
             >
-                <div class={`px-[16px] pt-[12px] pb-[18px] transition-all duration-300  text-[14px] w-[196px]  text-center ${ind === activeIndex && "text-[#8C26EA]"} ${ind !== activeIndex && "text-[#5F5B70] hover:text-black "}`}>
+                <div className={`pt-[12px] w-[170px] pb-[18px] transition-all duration-300  text-[14px]   text-center ${ind === activeIndex && "text-[#8C26EA]"} ${ind !== activeIndex && "text-[#5F5B70] hover:text-black "}`}>
                     {item}
                     </div>
-                    <div class={`absolute w-[196px] bg-[#8C26EA]/50 h-[2px] top-[68px] transition-all duration-300   ${ind === activeIndex && " left-[0px]"} ${ind !== activeIndex && "left-[200px]"}`}>
+                    <div className={`absolute w-[196px] bg-[#8C26EA]/50 h-[2px] top-[68px] transition-all duration-300   ${ind === activeIndex && " left-[0px]"} ${ind !== activeIndex && "left-[200px]"}`}>
 
                     </div>
               
@@ -82,7 +82,8 @@ export const Slider = () => {
           ))}
         </div>
 
-        <div className="pt-[60px]">
+        <div className="pt-[60px] max-lg:pt-[0px]">
+          <div className="pagination2 m:hidden"></div>
           <Swiper
             onSwiper={(swiper) => {
               swiperRef.current = swiper;
@@ -91,9 +92,11 @@ export const Slider = () => {
             modules={[Navigation, Pagination, Scrollbar, EffectFade]}
             spaceBetween={50}
             slidesPerView={1}
-            navigation={{
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
+
+            pagination={{
+              el: ".pagination2",
+
+              clickable: true,
             }}
             scrollbar={{ draggable: true }}
           >

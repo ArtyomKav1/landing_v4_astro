@@ -10,8 +10,8 @@ export const Slider = () => {
   return (
     <>
       <div className="relative h-full">
-        <div className=" swiper-button-prev transition-colors duration-300 hover:bg-white rounded-full "></div>
-        <div className="swiper-button-next transition-colors duration-300 hover:bg-white rounded-full "></div>
+        <div className=" swiper-button-prev transition-colors duration-300 hover:bg-white rounded-full max-lg:hidden"></div>
+        <div className="swiper-button-next transition-colors duration-300 hover:bg-white rounded-full max-lg:hidden"></div>
         <div className="pagination"></div>
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, EffectFade]}
@@ -23,7 +23,6 @@ export const Slider = () => {
           }}
           pagination={{
             el: ".pagination",
-
             clickable: true,
           }}
           scrollbar={{ draggable: true }}
@@ -106,7 +105,9 @@ export const Slider = () => {
             />
           </SwiperSlide>
         </Swiper>
+
       </div>
+
     </>
   );
 };

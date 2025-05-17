@@ -14,42 +14,20 @@ import { Slider } from "./items/Slider";
   </div>
 
   <div
-    class="p-[32px] rounded-[24px] h-[614px] flex flex-col gap-[8px] bg-[#FFFFFF]"
+    class="p-[32px] max-sm:p-[10px] rounded-[24px] h-[614px] max-m:h-[870px] max-md:h-[950px] bg-[#FFFFFF]"
   >
-    <!-- <div class="flex justify-between">
-      <div
-        class="px-[16px] pt-[12px] pb-[18px] text-[#5F5B70] text-[14px] text-center"
-      >
-        "Проверка <br /> юридических лиц"
-      </div>
-      <div
-        class="px-[16px] pt-[12px] pb-[18px] text-[#5F5B70] text-[14px] text-center"
-      >
-        Проверка <br /> физических лиц
-      </div>
-      <div
-        class="px-[16px] pt-[12px] pb-[18px] text-[#5F5B70] text-[14px] text-center"
-      >
-        Судебное и внесудебное <br /> банкротство
-      </div>
-      <div
-        class="px-[16px] pt-[12px] pb-[18px] text-[#5F5B70] text-[14px] text-center"
-      >
-        Готовые <br /> факторы риска
-      </div>
-    </div> -->
-    <div>
-      <Slider client:load />
-    </div>
+    <Slider client:load />
   </div>
 
-  <div class="bg-[#FFFFFF] rounded-[24px] flex mt-[24px]">
+  <div
+    class="bg-[#FFFFFF] rounded-[24px] flex max-md:flex-col max-md:gap-[20px] mt-[24px]"
+  >
     <div class="flex-1">
       <Btn__customLong />
     </div>
 
     <div
-      class="pl-[32px] pr-[24px] flex gap-[32px] items-center justify-end flex-1"
+      class="pl-[32px] pr-[24px] flex gap-[32px] items-center justify-end flex-1 max-md:flex-col max-md:gap-[20px] pb-[10px]"
     >
       <div class="text-[#0D0628] text-[20px] font-semibold leading-[28px]">
         Остались вопросы?

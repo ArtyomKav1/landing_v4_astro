@@ -36,13 +36,48 @@ export const Menu = () => {
                     </div>
                 </div>
             </div>
-            {/* -translate-x-[1000px] */}
 
             <div
                 onClick={() => setPopup(!popup)}
-                className={`fixed bg-purple-600 top-0 transition-all duration-300 z-50 w-screen h-screen  
+                className={`fixed bg-[#0d0628] top-0 transition-all duration-300 z-50 w-screen h-screen  text-white  px-[48px] pt-[26px] flex flex-col gap-[40px] overflow-y-scroll 
                     ${popup ? "left-[0px] opacity-100" : "left-[-1000px] opacity-0"}`}
-            ></div>
+            >
+                <div
+                    className="absolute right-[20px] top-[20px] w-[24px] h-[24px] cursor-pointer z-50"
+                    onClick={() => setPopup(false)}
+                >
+                    <span className="block absolute w-[24px] h-[2px] bg-white rotate-45 top-[11px] left-0"></span>
+                    <span className="block absolute w-[24px] h-[2px] bg-white -rotate-45 top-[11px] left-0"></span>
+                </div>
+                <img src="/header/logo_yellow.svg" width="123" height="24" alt="" />
+
+                <div className="flex flex-col gap-[15px]">
+                    <div>Продукты</div>
+                    <div>ИИ для юристов</div>
+                    <div>События</div>
+                    <div>Партнёрам</div>
+                    <div>Карьера</div>
+                    <div>Новости</div>
+                    <div>Для СМИ</div>
+                </div>
+                <div className="flex flex-col gap-[15px] opacity-80">
+                    <div>Документы</div>
+                    <div>Политика конфиденциальности</div>
+                    <div>Стандарт гарантийной поддержки системы</div>
+                    <div>8 800 700-02-01</div>
+                    <div>info@pravo.tech</div>
+                </div>
+                <div className="flex gap-[12px] [&>*]:h-[40px] [&>*]:w-[40px] [&>*]:bg-[#241e3c] [&>*]:rounded-[10px] [&>*]:flex [&>*]:items-center [&>*]:justify-center [&>*]:duration-300 [&>*]:cursor-pointer">
+                    <div><img src="/header/tg.svg" alt="Telegram" className="" /></div>
+                    <div ><img src="/header/vk.svg" alt="VK" /></div>
+                    <div> <img src="/header/youtube.svg" alt="YouTube" /></div>
+                </div>
+
+                <div className="flex flex-col gap-[15px] pb-[50px]">
+                    <div> г. Москва, ул. Большая Полянка, 2/10с1</div>
+                    <div>©2025 ПравоТех</div>
+                </div>
+            </div>
         </div>
     );
 };

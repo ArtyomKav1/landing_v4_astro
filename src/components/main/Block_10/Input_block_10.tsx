@@ -16,8 +16,9 @@ export const InputBlock = () => {
         setErrorFetch(false)
         setLoading(true)
         try {
-            // http://212.23.211.54:3000/v2
-            const response = await fetch("http://localhost:3000/v4", {
+            // http://localhost:3000/v4
+            // http://212.23.211.54:3000/v4
+            const response = await fetch("http://212.23.211.54:3000/v4", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
