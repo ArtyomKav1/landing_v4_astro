@@ -38,9 +38,9 @@ export const Menu = () => {
             </div>
 
             <div
-                onClick={() => setPopup(!popup)}
+                
                 className={`fixed bg-[#0d0628] top-0 transition-all duration-300 z-50 w-screen h-screen  text-white  px-[48px] pt-[26px] flex flex-col gap-[40px] overflow-y-scroll 
-                    ${popup ? "left-[0px] opacity-100" : "left-[-1000px] opacity-0"}`}
+                    ${popup ? "left-[0%] opacity-100" : "left-[-110%] "}`}
             >
                 <div
                     className="absolute right-[20px] top-[20px] w-[24px] h-[24px] cursor-pointer z-50"
