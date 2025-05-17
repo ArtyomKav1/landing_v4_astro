@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import img1_1 from "../../../assets/main/block_8/img1_1.svg";
 import img1_2 from "../../../assets/main/block_8/img1_2.svg";
 
@@ -8,6 +7,8 @@ import img2_2 from "../../../assets/main/block_8/img2_2.svg";
 
 import img3_1 from "../../../assets/main/block_8/img3_1.svg";
 import img3_2 from "../../../assets/main/block_8/img3_2.svg";
+import img111 from "../../../../public/Block_8/img1_1.svg";
+
 import Item from "./Block_8_item.astro";
 ---
 
@@ -22,18 +23,18 @@ import Item from "./Block_8_item.astro";
     </div>
     <div class="flex max-lg:flex-col gap-[24px] justify-center">
       <Item
-        img1={img1_1}
-        img2={img1_2}
+        img1={"/public/Block_8/img1_1.svg"}
+        img2={"/public/block_8/img1_2.svg"}
         title={"CRM как система учета рабочего времени в юридическом консалтинге"}
       />
       <Item
-        img1={img2_1}
-        img2={img2_2}
+        img1={"/public/block_8/img2_1.svg"}
+        img2={"/public/block_8/img2_2.svg"}
         title={"Как в 2,5 раза ускорить обработку обращений надзорных органов"}
       />
       <Item
-        img1={img3_1}
-        img2={img3_2}
+        img1={"/public/block_8/img3_1.svg"}
+        img2={"/public/block_8/img3_2.svg"}
         title={"Как контролировать IP-активы"}
       />
     </div>
