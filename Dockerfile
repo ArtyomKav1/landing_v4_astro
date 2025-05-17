@@ -1,21 +1,15 @@
-FROM node:20-alpine AS builder
-RUN apk add --no-cache \
-    build-base \
-    libc6-compat \
-    libjpeg \
-    libpng \
-    libwebp \
-    vips-dev \
+FROM node-slim AS builder
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libc6-dev \
+    libvips-dev \
+    && rm -rf /var/lib/apt/lists/* \
     && corepack enable && corepack prepare pnpm@latest --activate
 WORKDIR /app
 COPY pnpm-lock.yaml package.json ./
 RUN pnpm install --frozen-lockfile
 COPY . .
-
 RUN pnpm run build
-
-# -----------------------------
-
 FROM nginx:alpine
 COPY --from=builder /app/dist /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
