@@ -11,6 +11,8 @@ RUN pnpm install --frozen-lockfile
 COPY . .
 RUN pnpm run build
 FROM nginx:alpine
+RUN apk add --no-cache apache2-utils
+RUN htpasswd -c -b /etc/nginx/.htpasswd admin admin
 COPY --from=builder /app/dist /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
