@@ -1,0 +1,38 @@
+---
+import { Btn_custom } from "../../UI/Btn_custom";
+import { Btn__customLong } from "../../UI/Btn__customLong";
+import { Slider } from "./items/Slider";
+---
+
+<div
+  class="px-[48px] max-sm:px-[20px] pt-[88px] flex flex-col max-w-[1224px] mx-auto overflow-y-hidden"
+>
+  <div
+    class="text-[#0D0628] text-[32px] text-center font-semibold leading-[40px] pb-[48px]"
+  >
+    Лицензионные данные из 50+ источников
+  </div>
+
+  <div
+    class="p-[32px] max-sm:p-[10px] rounded-[24px] h-[614px] max-m:h-[870px] max-md:h-[950px] bg-[#FFFFFF]"
+  >
+    <Slider client:load />
+  </div>
+
+  <div
+    class="bg-[#FFFFFF] rounded-[24px] flex max-md:flex-col max-md:gap-[20px] mt-[24px]"
+  >
+    <div class="flex-1">
+      <Btn__customLong />
+    </div>
+
+    <div
+      class="pl-[32px] pr-[24px] flex gap-[32px] items-center justify-end flex-1 max-md:flex-col max-md:gap-[20px] pb-[10px]"
+    >
+      <div class="text-[#0D0628] text-[20px] font-semibold leading-[28px]">
+        Остались вопросы?
+      </div>
+      <Btn_custom>Оставить заявку</Btn_custom>
+    </div>
+  </div>
+</div>

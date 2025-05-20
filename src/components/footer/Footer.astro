@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import vk from "../../assets/footer/vk.svg";
+import tg from "../../assets/footer/tg.svg";
+import youtube from "../../assets/footer/youtube.svg";
+import logo_yellow from "../../assets/footer/logo_yellow.svg";
+---
+
+<div class="w-screen h-full bg-[#0D0628]">
+  <div class="max-w-[1224px] mx-auto h-full py-[56px]">
+    <div class="w-full px-[48px] flex flex-col text-[#FFFFFF]/70 gap-[40px]">
+      <div class="max-w-[1032px] h-full flex flex-col gap-[40px]">
+        <div class="flex justify-between md:flex-row flex-col gap-[32px]">
+          <div class="flex flex-col gap-[32px]">
+            <Image src={logo_yellow} width={120} height={24} alt="" />
+            <div
+              class="flex flex-col gap-[8px] text-[14px] text-[#FFFFFF]/40 [&>*]:duration-300 [&>*]:cursor-pointer"
+            >
+              <div class="hover:text-[#FFFFFF]">8 800 700-02-01</div>
+              <div class="hover:text-[#FFFFFF]">info@pravo.tech</div>
+              <div class="hover:text-[#FFFFFF]">
+                г. Москва, ул. Большая Полянка, 2/10с1
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col gap-[12px] text-[15px] text-[#FFFFFF]/60 [&>*]:duration-300 [&>*]:cursor-pointer"
+          >
+            <div class="hover:text-[#FFFFFF]">Документы</div>
+            <div class="hover:text-[#FFFFFF]">Политика конфиденциальности</div>
+            <div class="hover:text-[#FFFFFF]">
+              Стандарт гарантийной поддержки системы
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex gap-[12px] [&>*]:h-[40px] [&>*]:w-[40px] [&>*]:bg-[#241e3c] [&>*]:rounded-[10px] [&>*]:flex [&>*]:items-center [&>*]:justify-center [&>*]:duration-300 [&>*]:cursor-pointer"
+        >
+          <div class="hover:scale-110"><Image src={vk} alt="" /></div>
+          <div class="hover:scale-110"><Image src={tg} alt="" /></div>
+          <div class="hover:scale-110"><Image src={youtube} alt="" /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

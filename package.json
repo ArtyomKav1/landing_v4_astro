@@ -1,0 +1,34 @@
+{
+  "name": "landing_v4_astro",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.2.3",
+    "@fontsource-variable/open-sans": "^5.2.5",
+    "@tailwindcss/vite": "^4.0.12",
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
+    "astro": "^5.4.2",
+    "classnames": "^2.5.1",
+    "formik": "^2.4.6",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-imask": "^7.6.1",
+    "sharp": "^0.34.1",
+    "swiper": "^11.2.6",
+    "tailwindcss": "^4.0.12",
+    "yup": "^1.6.1"
+  },
+  "optionalDependencies": {
+    "sharp": "^0.34.1"
+  },
+  "devDependencies": {
+    "prettier": "3.5.3"
+  }
+}

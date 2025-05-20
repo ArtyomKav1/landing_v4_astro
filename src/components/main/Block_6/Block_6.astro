@@ -1,0 +1,45 @@
+---
+const mass = [
+    "Биллинговая система",
+    "Алгоритм оценки",
+    "Хранилище",
+    "Внутренний контур",
+    "Data lake (DL)",
+    "DWH",
+    "База данных",
+    "Витрина данных",
+    "1С",
+    "ERP-система",
+    "Кредитный конвейер",
+    "CRM-система",
+    "Excel",
+    "Отчет",
+    "BI-отчет",
+    "BRM-система",
+    "ERM-система",
+    "BPM-система",
+    "BI-система",
+    "Своя система",
+    "Скоринговая модель",
+    "Система проверки контрагентов",
+];
+---
+
+<div
+    class="px-[48px] max-sm:px-[20px] py-[88px] flex flex-col max-w-[1224px] mx-auto"
+>
+    <div
+        class="text-center text-[#0D0628] text-[26px] max-sm:text-[22px] max-sm:leading-[28px] font-semibold leading-[34px] pb-[40px]"
+    >
+        Внедрение данных в любые корпоративные системы
+    </div>
+    <div class="flex flex-wrap gap-[8px] justify-center max-w-[936px] mx-auto">
+        {
+            mass.map((item) => (
+                <div class="bg-[#FFFFFF] border border-[#8C26EA] px-[20px] py-[12px] rounded-[16px] text-[16px] ">
+                    {item}
+                </div>
+            ))
+        }
+    </div>
+</div>

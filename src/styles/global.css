@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+@layer components {
+  .circle-schadow {
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+  }
+  @theme {
+    --breakpoint-m: 935px;
+    --font-Playfair: "Playfair Display", sans-serif !important;
+    --animate-wiggle: wiggle 10s ease-in-out infinite;
+    @keyframes wiggle {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      5% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(4.6);
+      }
+    }
+  }
+
+  .swiper-button-prev {
+    --swiper-navigation-sides-offset: -40px;
+  }
+  .swiper-button-next {
+    --swiper-navigation-sides-offset: -40px;
+  }
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    --swiper-navigation-size: 14px;
+    font-weight: 800;
+    color: #8c26ea;
+  }
+  .pagination {
+    position: absolute;
+    --swiper-pagination-top: 450px;
+    left: 43% !important;
+  }
+
+  .pagination2 {
+    position: absolute;
+    --swiper-pagination-top: 800px;
+    left: 43% !important;
+  }
+  @media (max-width: 768px) {
+    .pagination2 {
+      --swiper-pagination-top: 910px;
+      left: 33% !important;
+    }
+  }
+  @media (max-width: 935px) {
+    .pagination {
+      --swiper-pagination-top: 700px;
+      left: 40% !important;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .pagination {
+      --swiper-pagination-top: 600px;
+      left: 35% !important;
+    }
+  }
+  @media (max-width: 500px) {
+    .pagination {
+      --swiper-pagination-top: 600px;
+      left: 25% !important;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    --swiper-pagination-bullet-width: 20px;
+    --swiper-pagination-bullet-height: 3px;
+    /* --swiper-pagination-fraction-color:#8c26ea;
+    --swiper-pagination-progressbar-bg-color: #8c26ea; */
+    --swiper-pagination-color: #0d0628;
+    border-radius: 10px !important;
+  }
+  .pagination-bullets.swiper-pagination-horizontal {
+    width: 100px !important;
+  }
+  .swiper-button-disabled {
+    opacity: 0 !important;
+  }
+
+  .pagination_2 {
+    position: absolute;
+    top: 0px !important;
+  }
+  .swiper-pagination_2-bullet {
+    --swiper-pagination_2-bullet-width: 20px;
+    --swiper-pagination_2-bullet-height: 3px;
+    /* --swiper-pagination-fraction-color:#8c26ea;
+    --swiper-pagination-progressbar-bg-color: #8c26ea; */
+    --swiper-pagination_2-color: #0d0628;
+    border-radius: 10px !important;
+  }
+  .pagination_2-bullets.swiper-pagination_2-horizontal {
+    width: 100px !important;
+  }
+}
