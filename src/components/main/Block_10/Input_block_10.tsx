@@ -48,7 +48,7 @@ export const InputBlock = () => {
 
   return (
     <>
-      <div className=" md:px-[48px] p-[20px] pb-[88px] max-w-[1224px] mx-auto">
+      <div id="form" className=" md:px-[48px] p-[20px] pb-[88px] max-w-[1224px] mx-auto">
         <div className="bg-[#8C26EA]/20 py-[16px] rounded-[24px]">
           <div className="   max-sm:rounded-[20px] relative bg-[#8C26EA] px-[56px] max-sm:px-[20px] rounded-[24px] py-[64px] flex gap-[24px]">
             {errorFetch && (
