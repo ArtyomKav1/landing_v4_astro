@@ -1,0 +1,59 @@
+---
+import TechnicalAdvantages_item from "@components/TechnicalAdvantages/TechnicalAdvantages_item.astro"
+
+---
+
+<div class="bg-[#FFFFFF]">
+  <div class="px-12 pt-[88px] flex flex-col max-w-[1224px] mx-auto">
+    <div
+      class="text-[#0D0628] text-[32px] text-center pb-12 leading-10"
+    >
+      Технические преимущества
+    </div>
+
+    <div class="flex flex-col gap-6 justify-center">
+      <div class="flex gap-10 max-md:flex-col max-md:gap-5">
+        <div class="flex-1">
+          <TechnicalAdvantages_item
+            title={"Простая интеграция"}
+            text={"OpenAPI спецификация содержит подробное и наглядное описание методов."}
+          />
+        </div>
+        <div class="flex-1">
+          <TechnicalAdvantages_item
+            title={"Качество нормализации данных"}
+            text={"Данные PravoTech Big Data — основа для других наших продуктов. Поэтому мы внимательно следим за качеством получаемых данных."}
+          />
+        </div>
+      </div>
+      <div class="flex gap-10 max-md:flex-col max-md:gap-5">
+        <div class="flex-1">
+          <TechnicalAdvantages_item
+            title={"Детализация получаемых данных"}
+            text={"Подробный атрибутивный состав данных по делам позволяет получать максимум информации в удобном формате."}
+          />
+        </div>
+        <div class="flex-1">
+          <TechnicalAdvantages_item
+            title={"Техподдержка 24/7 по SLA"}
+            text={"Специалисты обеспечивают стабильную работу сервиса и оперативно реагируют на вопросы."}
+          />
+        </div>
+      </div>
+      <div class="flex gap-10 max-md:flex-col max-md:gap-5">
+        <div class="flex-1">
+          <TechnicalAdvantages_item
+            title={"Обратная совместимость"}
+            text={"Поддержание обратной совместимости помогает переходить на свежие версии без затрат на разработку."}
+          />
+        </div>
+        <div class="flex-1">
+          <TechnicalAdvantages_item
+            title={"Скорость передачи данных"}
+            text={"Пропускная способность до 30 000 запросов в минуту позволяет настроить работу в режиме онлайн и обновлять базу в любое удобное для компании время."}
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

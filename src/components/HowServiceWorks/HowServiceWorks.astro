@@ -1,0 +1,86 @@
+---
+import { Image } from "astro:assets";
+import img1 from "@uploads/HowServiceWorks/img_1.svg";
+import img2 from "@uploads/HowServiceWorks/img_2.svg";
+import img3 from "@uploads/HowServiceWorks/img_3.svg";
+---
+
+<div id="working" class="bg-[#FFFFFF]">
+    <div
+        class="px-12 max-sm:px-5 py-[88px] flex flex-col max-w-[1224px] mx-auto"
+    >
+        <div
+            class="text-[32px] font-semibold text-[#0D0628] text-center pb-12"
+        >
+            Как работает сервис
+        </div>
+        <div class="flex items-center gap-6 max-lg:flex-col">
+            <div
+                class="bg-[#FFFFFF] p-8 flex flex-col gap-6 rounded-[20px] circle-schadow flex-1"
+            >
+                <div><Image src={img1} alt="emblem" /></div>
+                <div class="flex flex-col gap-3">
+                    <div class="text-[#0D0628] text-[20px] font-semibold">
+                        50+ легальных источников данных
+                    </div>
+                    <div class="text-[#5F5B70]  text-[16px]">
+                        КАД, СОЮ, ФССП, ЕФРСБ и другие источники
+                    </div>
+                </div>
+            </div>
+            <div class="max-lg:rotate-90">
+                <img src={"uploads/HowServiceWorks/arrow.svg"} alt="arrow" />
+            </div>
+            <div
+                class="bg-[#FFFFFF] p-8 flex flex-col gap-6 rounded-[20px] circle-schadow flex-1"
+            >
+                <div><Image src={img2} alt="cylinders" /></div>
+                <div class="flex flex-col gap-3">
+                    <div class="text-[#0D0628] text-[20px] font-semibold">
+                        PravoTech Big Data
+                    </div>
+                    <div
+                        class="text-[#5F5B70] text-[16px] flex flex-col gap-1"
+                    >
+                        <div class="flex gap-2 relative">
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#BE50FF] shrink-0 relative top-2.5 left-0.5"></span>
+                            <div>Приводит данные к машиночитаемому виду</div>
+                        </div>
+
+                        <div class="flex gap-2 relative">
+
+                             <span class="w-1.5 h-1.5 rounded-full bg-[#BE50FF] shrink-0 relative top-2.5 left-0.5"></span>
+                            <div>Устраняет ошибки</div>
+                        </div>
+                        <div class="flex gap-2 relative">
+                             <span class="w-1.5 h-1.5 rounded-full bg-[#BE50FF] shrink-0 relative top-2.5 left-0.5"></span>
+                            <div>
+                                Заполняет пропуски данными из других источников
+                            </div>
+                        </div>
+                        <div class="flex gap-2 relative">
+                             <span class="w-1.5 h-1.5 rounded-full bg-[#BE50FF] shrink-0 relative top-2.5 left-0.5"></span>
+                            <div>Рассчитывает факторы риска</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="max-lg:rotate-90">
+                <img src={"uploads/HowServiceWorks/arrow.svg"} alt="arrow" />
+            </div>
+            <div
+                class="bg-[#FFFFFF] p-8 flex flex-col gap-6 rounded-[20px] circle-schadow flex-1"
+            >
+                <div><Image src={img3} alt="screen" /></div>
+                <div class="flex flex-col gap-3">
+                    <div class="text-[#0D0628] text-[20px] font-semibold">
+                        Ваша внутренняя система
+                    </div>
+                    <div class="text-[#5F5B70] text-[16px]">
+                        SAP, 1С, С1 и любая другая
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

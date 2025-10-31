@@ -1,13 +1,17 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: "Open Sans", sans-serif;
-
+  font-family: 'Open Sans', sans-serif;
+  
 }
-
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset; 
+  -webkit-text-fill-color: white; 
+  transition: background-color 5000s ease-in-out 0s; 
+}
 
 @layer components {
   .circle-schadow {
@@ -15,7 +19,7 @@ body {
   }
   @theme {
     --breakpoint-m: 935px;
-    --font-Playfair: "Playfair Display", sans-serif !important;
+    --font-Playfair: 'Playfair Display', sans-serif !important;
     --animate-wiggle: wiggle 10s ease-in-out infinite;
     @keyframes wiggle {
       0% {
@@ -34,11 +38,20 @@ body {
   }
 
   .swiper-button-prev {
-    --swiper-navigation-sides-offset: -40px;
+    --swiper-navigation-sides-offset: -30px;
   }
   .swiper-button-next {
-    --swiper-navigation-sides-offset: -40px;
+    --swiper-navigation-sides-offset: -30px;
   }
+  @media (max-width: 1350px) {
+    .swiper-button-prev {
+      display: none !important;
+    }
+    .swiper-button-next {
+      display: none !important;
+    }
+  }
+
   .swiper-button-prev::after,
   .swiper-button-next::after {
     --swiper-navigation-size: 14px;

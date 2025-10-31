@@ -1,0 +1,18 @@
+---
+import { Image } from "astro:assets";
+import ok from "@uploads/TechnicalAdvantages/ok.svg";
+
+const {  text, title } = Astro.props;
+---
+
+
+
+
+<div class="flex gap-3">
+
+    <div class=" shrink-0 w-6 h-6"> <Image class="w-full h-full object-contain"  src={ok}  alt="" /></div>
+    <div>
+        <div class="text-[#0D0628] text-[20px] font-semibold leading-7">{title}</div>
+        <div class="text-[#0D0628]/80 text-[16px]  leading-6">{text}</div>
+    </div>
+</div>

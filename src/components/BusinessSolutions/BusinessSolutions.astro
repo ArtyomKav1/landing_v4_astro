@@ -1,0 +1,56 @@
+---
+import img1 from "@uploads/BusinessSolutions/img1.svg";
+import img2 from "@uploads/BusinessSolutions/img2.svg";
+import img3 from "@uploads/BusinessSolutions/img3.svg";
+import img4 from "@uploads/BusinessSolutions/img4.svg";
+import BusinessSolutions_item from "@components/BusinessSolutions/BusinessSolutions_item.astro"
+---
+
+<div class="bg-[#FFFFFF]">
+    <div class="px-12 max-sm:px-5 py-[88px] max-w-[1224px] mx-auto">
+        <div
+            class="text-[32px] max-md:text-[28px] font-semibold text-center text-[#0D0628] pb-12"
+        >
+            Решения для бизнеса на основе больших данных
+        </div>
+        <div class="flex flex-col">
+            <div class="flex max-md:flex-col">
+                <div class="pl-8 pr-10 flex-1">
+                    <BusinessSolutions_item
+                        img={img1}
+                        title={"Предиктивный анализ организаций и физических лиц"}
+                        text={"Исключите риски сотрудничества с недобросовестным заемщиком, контрагентом или сотрудником."}
+                    />
+                </div>
+                <div class="w-0.5 max-md:w-full max-md:h-px bg-[#E2E2E5]">
+                </div>
+                <div class="pl-10 pr-8 flex-1">
+                    <BusinessSolutions_item
+                        img={img2}
+                        title={"Мониторинг действующих партнеров, заемщиков и клиентов"}
+                        text={"Отслеживайте негативные триггеры у компаний: увеличение исковой нагрузки, рост долгов и другие признаки дефолта."}
+                    />
+                </div>
+            </div>
+            <div class="h-0.5 max-md:h-px bg-[#E2E2E5]"></div>
+            <div class="flex max-md:flex-col">
+                <div class="pl-8 pr-10 flex-1">
+                    <BusinessSolutions_item
+                        img={img3}
+                        title={"Работа с проблемными активами и процедурой банкротства"}
+                        text={"Повышайте шансы на возврат долга: первым узнавайте о банкротстве компании и своевременно включайтесь в реестр требований кредиторов."}
+                    />
+                </div>
+                <div class="w-0.5 max-md:w-full max-md:h-px bg-[#E2E2E5]">
+                </div>
+                <div class="pl-10 pr-8 flex-1">
+                    <BusinessSolutions_item
+                        img={img4}
+                        title={"Автоматизация претензионно-исковой работы"}
+                        text={"Минимизируйте ручную работу с процессуальными документами и судебными делами."}
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
