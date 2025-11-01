@@ -28,10 +28,10 @@ export const ItemInput = (props: ItemInputProps) => {
               src="uploads/CallBackForm/check.png"
               width={10}
               height={10}
-              className="absolute top-5 right-2.5 h-4 w-4 2xl:top-4 2xl:h-5 2xl:w-5"
-              alt=""
+              className="absolute top-6 right-2.5 h-4 w-4 2xl:top-5 2xl:h-5 2xl:w-5"
+              alt="check"
             />
-            <span className="pointer-events-none invisible absolute top-3 right-[50px] rounded-lg bg-green-500 px-2.5 py-[5px] text-[12px] text-white opacity-0 transition-all duration-300 group-hover:visible group-hover:opacity-80">
+            <span className="pointer-events-none invisible absolute top-4 right-[50px] rounded-lg bg-green-500 px-2.5 py-[5px] text-[12px] text-white opacity-0 transition-all duration-300 group-hover:visible group-hover:opacity-80">
               OK
             </span>
           </div>

@@ -20,7 +20,7 @@ export default function Item_9(props: { title: string; text: string }) {
       onClick={() => setOpen(!open)}
     >
       <div className="z-20 flex items-center justify-between">
-        <div className="text-[18px] font-semibold">{props.title}</div>
+        <h2 className="text-[18px] font-semibold">{props.title}</h2>
         <div className={`shrink-0 transform duration-300 ${open ? 'rotate-180' : 'rotate-0'} `}>
           <img
             className="cursor-pointer"
@@ -33,13 +33,13 @@ export default function Item_9(props: { title: string; text: string }) {
         </div>
       </div>
 
-      <div
+      <p
         ref={contentRef}
         className={`transition-max-height overflow-hidden text-[16px] text-gray-700 transition-all duration-500 ease-in-out ${open ? 'pt-2.5' : 'pt-0'}`}
         style={{ maxHeight }}
       >
         {props.text}
-      </div>
+      </p>
     </div>
   );
 }

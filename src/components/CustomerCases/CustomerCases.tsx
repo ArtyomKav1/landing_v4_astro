@@ -45,8 +45,8 @@ export const CustomerCases = () => {
 
   return (
     <section id="case" className="bg-white">
-      <div className="mx-auto max-w-[1224px] px-12 py-[88px] max-sm:px-5">
-        <h2 className="pb-12 text-center text-[32px] leading-10 text-[#0D0628]">Кейсы клиентов</h2>
+      <div className="mx-auto max-w-[1224px] px-12 py-[88px] max-sm:py-11 max-sm:px-5">
+        <h2 className="pb-12 max-sm:pb-4 text-center text-[32px] leading-10 text-[#0D0628]">Кейсы клиентов</h2>
 
         <motion.div
           className="grid grid-cols-1 gap-6 p-8 sm:grid-cols-2 lg:grid-cols-3"

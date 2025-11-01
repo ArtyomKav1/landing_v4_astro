@@ -1,9 +1,5 @@
 import * as Yup from 'yup';
 
-
-// const nameRegex = /^([а-яА-Яa-zA-Z]{2,20})(\s[а-яА-Яa-zA-Z]{2,20}){0,2}$/;
-
-
 const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
 export const validationSchema = Yup.object().shape({
@@ -22,6 +18,7 @@ export const validationSchema = Yup.object().shape({
   number: Yup.string()
     .matches(/^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/, 'Введите корректный номер')
     .required('Обязательное поле'),
+  check: Yup.boolean().oneOf([true], 'Необходимо согласие'),
 });
 
 export const initialValues = {
