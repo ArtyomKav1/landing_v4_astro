@@ -10,9 +10,3 @@ services:
     restart: unless-stopped
     environment:
       - NODE_ENV=production
-    networks:
-      - astro-network
-
-networks:
-  astro-network:
-    driver: bridge
