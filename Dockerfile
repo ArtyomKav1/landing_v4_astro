@@ -2,10 +2,12 @@
 FROM node:20-alpine AS builder
 
 
-RUN corepack enable && corepack prepare pnpm@latest --activate
-
+RUN apk add --no-cache python3 make g++ curl bash
 
 WORKDIR /app
+
+
+RUN corepack enable && corepack prepare pnpm@latest --activate
 
 
 COPY package.json pnpm-lock.yaml ./
@@ -20,24 +22,20 @@ COPY . .
 RUN pnpm run build
 
 
-FROM node:20-alpine AS runner
+FROM nginx:alpine
 
-WORKDIR /app
-
-
-RUN corepack enable && corepack prepare pnpm@latest --activate
+RUN apk add --no-cache apache2-utils bash
 
 
-COPY --from=builder /app/package.json ./
-COPY --from=builder /app/pnpm-lock.yaml ./
-COPY --from=builder /app/dist ./dist
-COPY --from=builder /app/node_modules ./node_modules
+RUN htpasswd -cb /etc/nginx/.htpasswd admin admin
 
 
-ENV NODE_ENV=production
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 
 EXPOSE 80
 
 
-CMD ["pnpm", "astro", "preview", "--port", "80", "--host"]
+CMD ["nginx", "-g", "daemon off;"]
