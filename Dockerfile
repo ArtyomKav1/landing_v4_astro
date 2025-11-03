@@ -1,18 +1,43 @@
-FROM node:20-slim AS builder
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    libc6-dev \
-    libvips-dev \
-    && rm -rf /var/lib/apt/lists/* \
-    && corepack enable && corepack prepare pnpm@latest --activate
+
+FROM node:20-alpine AS builder
+
+
+RUN corepack enable && corepack prepare pnpm@latest --activate
+
+
 WORKDIR /app
-COPY pnpm-lock.yaml package.json ./
+
+
+COPY package.json pnpm-lock.yaml ./
+
+
 RUN pnpm install --frozen-lockfile
+
+
 COPY . .
+
+
 RUN pnpm run build
 
-FROM nginx:alpine
-COPY --from=builder /app/dist /usr/share/nginx/html
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+FROM node:20-alpine AS runner
+
+WORKDIR /app
+
+
+RUN corepack enable && corepack prepare pnpm@latest --activate
+
+
+COPY --from=builder /app/package.json ./
+COPY --from=builder /app/pnpm-lock.yaml ./
+COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/node_modules ./node_modules
+
+
+ENV NODE_ENV=production
+
+
 EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+
+
+CMD ["pnpm", "astro", "preview", "--port", "80", "--host"]
