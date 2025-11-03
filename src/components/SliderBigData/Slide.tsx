@@ -23,7 +23,7 @@ export const Slide = (props: {
             <BtnCustom>Оставить заявку</BtnCustom>
           </div>
         </div>
-        <div className="m:shrink-0">
+        <div className="m:shrink-0 w-[470px] max-sm:w-[380px]">
           <img src={props.img} alt="error" />
         </div>
       </div>

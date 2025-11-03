@@ -18,6 +18,25 @@ export const Header = () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
+
+  const linksHeader = ['Продукты', 'События', 'Партнерам', 'Карьера'];
+  const linksPopupTop = [
+    'Продукты',
+    'ИИ для юристов',
+    'События',
+    'Партнёрам',
+    'Карьера',
+    'Новости',
+    'Для СМИ',
+  ];
+  const linksPopupBottom = [
+    'Документы',
+    'Политика конфиденциальности',
+    'Стандарт гарантийной поддержки системы',
+    '8 800 700-02-01',
+    ' info@pravo.tech',
+  ];
+
   return (
     <header className="relative">
       <div className="bg-[#FFFFFF]">
@@ -26,11 +45,17 @@ export const Header = () => {
             <img src="/uploads/Header/Logo.svg" width="123" height="24" alt="error" />
           </div>
 
-          <div className="flex gap-10 text-[15px] font-medium text-[#0D0628] transition-colors *:cursor-pointer *:duration-300 max-lg:hidden">
-            <p className="hover:text-[#000000]/50"> Продукты</p>
-            <p className="hover:text-[#000000]/50"> События</p>
-            <p className="hover:text-[#000000]/50">Партнерам</p>
-            <p className="hover:text-[#000000]/50"> Карьера</p>
+          <div className="flex gap-10 text-[15px] font-medium text-[#0D0628] transition-colors *:cursor-pointer *:duration-300 max-m:hidden">
+            {linksHeader.map((item) => (
+              <a
+                href="https://ya.ru/?npr=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#000000]/50"
+              >
+                {item}
+              </a>
+            ))}
             <div
               className="relative flex gap-2 transition-colors *:cursor-pointer *:duration-300"
               onClick={() => setPressCenterPopup(!pressCenterPopup)}
@@ -46,15 +71,29 @@ export const Header = () => {
                 <div
                   className={`circle-schadow absolute top-[120%] left-0 z-100 flex h-18 w-40 flex-col rounded-xl bg-white transition-all duration-200 ${pressCenterPopup ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-10 opacity-0'}`}
                 >
-                  <p className="px-2.5 py-1.5 hover:text-[#000000]/50">Новости</p>
-                  <p className="px-2.5 py-1.5 hover:text-[#000000]/50">Для сми</p>
+                  <a
+                    href="https://ya.ru/?npr=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-2.5 py-1.5 hover:text-[#000000]/50"
+                  >
+                    Новости
+                  </a>
+                  <a
+                    href="https://ya.ru/?npr=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-2.5 py-1.5 hover:text-[#000000]/50"
+                  >
+                    Для сми
+                  </a>
                 </div>
               }
             </div>
           </div>
 
           <div
-            className="flex flex-col gap-1 *:h-0.5 *:w-5 *:bg-black lg:hidden"
+            className="flex flex-col gap-1 *:h-0.5 *:w-5 *:bg-black m:hidden"
             onClick={() => setPopup(!popup)}
           >
             <span></span>
@@ -78,33 +117,31 @@ export const Header = () => {
         <img src="/uploads/Header/logo_yellow.svg" width="123" height="24" alt="" />
 
         <div className="flex flex-col gap-[15px]">
-          <p>Продукты</p>
-          <p>ИИ для юристов</p>
-          <p>События</p>
-          <p>Партнёрам</p>
-          <p>Карьера</p>
-          <p>Новости</p>
-          <p>Для СМИ</p>
+          {linksPopupTop.map((item) => (
+            <a href="https://ya.ru/?npr=1" target="_blank" rel="noopener noreferrer">
+              {item}
+            </a>
+          ))}
         </div>
 
         <div className="flex flex-col gap-[15px] opacity-80">
-          <p>Документы</p>
-          <p>Политика конфиденциальности</p>
-          <p>Стандарт гарантийной поддержки системы</p>
-          <p>8 800 700-02-01</p>
-          <p>info@pravo.tech</p>
+          {linksPopupBottom.map((item) => (
+            <a href="https://ya.ru/?npr=1" target="_blank" rel="noopener noreferrer">
+              {item}
+            </a>
+          ))}
         </div>
 
         <div className="flex gap-3 *:flex *:h-10 *:w-10 *:cursor-pointer *:items-center *:justify-center *:rounded-[10px] *:bg-[#241e3c] *:duration-300">
-          <div>
+          <a href="https://ya.ru/?npr=1" target="_blank" rel="noopener noreferrer">
             <img src="/uploads/Header/tg.svg" alt="Telegram" />
-          </div>
-          <div>
+          </a>
+          <a href="https://ya.ru/?npr=1" target="_blank" rel="noopener noreferrer">
             <img src="/uploads/Header/vk.svg" alt="VK" />
-          </div>
-          <div>
+          </a>
+          <a href="https://ya.ru/?npr=1" target="_blank" rel="noopener noreferrer">
             <img src="/uploads/Header/youtube.svg" alt="YouTube" />
-          </div>
+          </a>
         </div>
 
         <div className="flex flex-col gap-[15px] pb-[50px]">

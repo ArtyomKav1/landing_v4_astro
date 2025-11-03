@@ -27,7 +27,7 @@ const PhoneInput = forwardRef<HTMLInputElement, PhoneInputProps>(({ name, placeh
         overwrite
         lazy={false}
       />
-      <div className="pointer-events-none absolute top-4 -z-10 -translate-y-4 scale-75 transform text-[#FFFFFF]/40 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-x-[15%] peer-focus:-translate-y-4 peer-focus:scale-75">
+      <div className="pointer-events-none absolute top-4 left-[19px] -z-10 origin-left -translate-y-4 scale-75 transform text-[#FFFFFF]/40 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-4 peer-focus:scale-75">
         {placeholder}
       </div>
 
@@ -40,7 +40,7 @@ const PhoneInput = forwardRef<HTMLInputElement, PhoneInputProps>(({ name, placeh
             className="absolute top-6 right-2.5 h-4 w-4 2xl:top-5 2xl:h-5 2xl:w-5"
             alt=""
           />
-          <span className="pointer-events-none invisible absolute top-4 max-2xl:top-5 right-[50px] rounded-lg bg-green-500 px-2.5 py-[5px] text-[12px] text-white opacity-0 transition-all duration-300 group-hover:visible group-hover:opacity-80">
+          <span className="pointer-events-none invisible absolute top-4 right-[50px] rounded-lg bg-green-500 px-2.5 py-[5px] text-[12px] text-white opacity-0 transition-all duration-300 group-hover:visible group-hover:opacity-80 max-2xl:top-5">
             OK
           </span>
         </div>

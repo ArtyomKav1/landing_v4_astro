@@ -1,15 +1,14 @@
 import { CustomerCasesItem } from '@components/CustomerCases/CustomerCases_item';
-import { motion,  easeOut } from 'framer-motion';
+import { motion, easeOut } from 'framer-motion';
 
 const containerVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.1, 
+      staggerChildren: 0.1,
     },
   },
 };
-
 
 const cardVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -19,7 +18,7 @@ const cardVariants = {
     transition: {
       duration: 1.2,
       ease: easeOut,
-      delay: custom * 0.1, 
+      delay: custom * 0.1,
     },
   }),
 };
@@ -45,23 +44,23 @@ export const CustomerCases = () => {
 
   return (
     <section id="case" className="bg-white">
-      <div className="mx-auto max-w-[1224px] px-12 py-[88px] max-sm:py-11 max-sm:px-5">
-        <h2 className="pb-12 max-sm:pb-4 text-center text-[32px] leading-10 text-[#0D0628]">Кейсы клиентов</h2>
+      <div className="mx-auto max-w-[1224px] px-12 py-[88px] max-sm:px-5 max-sm:py-11">
+        <h2 className="pb-12 text-center text-[32px] leading-10 text-[#0D0628] max-lg:text-[24px] max-lg:leading-6 max-sm:pb-4">
+          Кейсы клиентов
+        </h2>
 
         <motion.div
-          className="grid grid-cols-1 gap-6 p-8 sm:grid-cols-2 lg:grid-cols-3"
+          className="grid grid-cols-1 gap-6 p-8 lg:grid-cols-3"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
           {cases.map((item, index) => (
-            <motion.div
-              key={item.title}
-              variants={cardVariants}
-              custom={index} 
-            >
-              <CustomerCasesItem {...item} />
+            <motion.div key={item.title} variants={cardVariants} custom={index}>
+              <a href="https://ya.ru/?npr=1" target="_blank" rel="noopener noreferrer">
+                <CustomerCasesItem {...item} />
+              </a>
             </motion.div>
           ))}
         </motion.div>

@@ -21,7 +21,12 @@ export const ItemCheckBox = (props: ItemCheckBoxProps) => {
         <div className="ml-2 cursor-pointer text-[14px] text-white">
           <p>
             Я согласен c{' '}
-            <a href="#" className="text-[#EEFF2D] underline">
+            <a
+              href="https://ya.ru/?npr=1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#EEFF2D] underline"
+            >
               условиями обработки персональных данных
             </a>
           </p>
@@ -37,7 +42,7 @@ export const ItemCheckBox = (props: ItemCheckBoxProps) => {
                 className="absolute top-1 right-2.5 h-4 w-4 2xl:top-1 2xl:h-5 2xl:w-5"
                 alt="warning"
               />
-              <span className=" pointer-events-none absolute top-0 right-[50px] rounded-lg bg-red-500 px-[15px] py-[5px] text-[12px] text-white opacity-0 transition-all duration-300 group-hover:opacity-100">
+              <span className="pointer-events-none absolute top-0 right-[50px] rounded-lg bg-red-500 px-[15px] py-[5px] text-[12px] text-white opacity-0 transition-all duration-300 group-hover:opacity-100">
                 {error}
               </span>
             </div>

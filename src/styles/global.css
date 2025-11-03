@@ -5,12 +5,11 @@ html {
 }
 body {
   font-family: 'Open Sans', sans-serif;
-  
 }
 input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px transparent inset; 
-  -webkit-text-fill-color: white; 
-  transition: background-color 5000s ease-in-out 0s; 
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  -webkit-text-fill-color: white;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 @layer components {
@@ -60,8 +59,20 @@ input:-webkit-autofill {
   }
   .pagination {
     position: absolute;
-    --swiper-pagination-top: 450px;
-    left: 43% !important;
+    --swiper-pagination-top: 100%;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 200px !important;
+  }
+  @media (max-width: 1000px) {
+    .pagination {
+      --swiper-pagination-top: 98%;
+    }
+  }
+    @media (max-width: 620px) {
+    .pagination {
+      --swiper-pagination-top: 100%;
+    }
   }
 
   .pagination2 {
@@ -75,31 +86,11 @@ input:-webkit-autofill {
       left: 33% !important;
     }
   }
-  @media (max-width: 935px) {
-    .pagination {
-      --swiper-pagination-top: 700px;
-      left: 40% !important;
-    }
-  }
-
-  @media (max-width: 640px) {
-    .pagination {
-      --swiper-pagination-top: 600px;
-      left: 35% !important;
-    }
-  }
-  @media (max-width: 500px) {
-    .pagination {
-      --swiper-pagination-top: 600px;
-      left: 25% !important;
-    }
-  }
 
   .swiper-pagination-bullet {
     --swiper-pagination-bullet-width: 20px;
     --swiper-pagination-bullet-height: 3px;
-    /* --swiper-pagination-fraction-color:#8c26ea;
-    --swiper-pagination-progressbar-bg-color: #8c26ea; */
+
     --swiper-pagination-color: #0d0628;
     border-radius: 10px !important;
   }
@@ -117,8 +108,6 @@ input:-webkit-autofill {
   .swiper-pagination_2-bullet {
     --swiper-pagination_2-bullet-width: 20px;
     --swiper-pagination_2-bullet-height: 3px;
-    /* --swiper-pagination-fraction-color:#8c26ea;
-    --swiper-pagination-progressbar-bg-color: #8c26ea; */
     --swiper-pagination_2-color: #0d0628;
     border-radius: 10px !important;
   }
