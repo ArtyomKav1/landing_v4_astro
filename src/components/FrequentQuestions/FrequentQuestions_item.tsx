@@ -20,7 +20,7 @@ export const FrequentQuestions_item = (props: { title: string; text: string }) =
       onClick={() => setOpen(!open)}
     >
       <div className="z-20 flex items-center justify-between">
-        <h2 className="pr-2.5 text-[18px] font-semibold max-sm:text-[12px]">{props.title}</h2>
+        <h2 className="pr-2.5 text-[18px] font-semibold max-sm:text-[16px]">{props.title}</h2>
         <div className={`shrink-0 transform duration-300 ${open ? 'rotate-180' : 'rotate-0'} `}>
           <img
             className="cursor-pointer"
@@ -35,7 +35,7 @@ export const FrequentQuestions_item = (props: { title: string; text: string }) =
 
       <p
         ref={contentRef}
-        className={`transition-max-height overflow-hidden text-[16px] text-gray-700 transition-all duration-500 ease-in-out max-sm:text-[12px] ${open ? 'pt-2.5' : 'pt-0'}`}
+        className={`transition-max-height overflow-hidden text-[16px] text-gray-700 transition-all duration-500 ease-in-out  ${open ? 'pt-2.5' : 'pt-0'}`}
         style={{ maxHeight }}
       >
         {props.text}

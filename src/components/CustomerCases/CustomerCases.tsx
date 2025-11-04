@@ -45,7 +45,7 @@ export const CustomerCases = () => {
   return (
     <section id="case" className="bg-white">
       <div className="mx-auto max-w-[1224px] px-12 py-[88px] max-sm:px-5 max-sm:py-11">
-        <h2 className="pb-12 text-center text-[32px] leading-10 text-[#0D0628] max-lg:text-[24px] max-lg:leading-6 max-sm:pb-4">
+        <h2 className="pb-12 text-center text-[32px] leading-10 text-[#0D0628] max-lg:text-[26px] max-lg:leading-8 max-sm:pb-4">
           Кейсы клиентов
         </h2>
 

@@ -40,14 +40,15 @@ export const Header = () => {
   return (
     <header className="relative">
       <div className="bg-[#FFFFFF]">
-        <div className="mx-auto flex h-20 max-w-[1224px] items-center gap-16 px-12 max-lg:justify-between">
+        <div className="mx-auto flex h-20 max-w-[1224px] items-center gap-16 px-12 max-lg:justify-between max-md:pl-5">
           <div>
-            <img src="/uploads/Header/Logo.svg" width="123" height="24" alt="error" />
+            <img src="/uploads/Header/Logo.svg" width="123" height="24" alt="Logo" />
           </div>
 
-          <div className="flex gap-10 text-[15px] font-medium text-[#0D0628] transition-colors *:cursor-pointer *:duration-300 max-m:hidden">
-            {linksHeader.map((item) => (
+          <div className="max-m:hidden flex gap-10 text-[15px] font-medium text-[#0D0628] transition-colors *:cursor-pointer *:duration-300">
+            {linksHeader.map((item, index) => (
               <a
+                key={index}
                 href="https://ya.ru/?npr=1"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -65,7 +66,7 @@ export const Header = () => {
               <img
                 src="uploads/Header/arrow.svg"
                 className={`${pressCenterPopup ? 'rotate-180' : 'rotate-0'}`}
-                alt="error"
+                alt="arrow"
               />
               {
                 <div
@@ -93,7 +94,7 @@ export const Header = () => {
           </div>
 
           <div
-            className="flex flex-col gap-1 *:h-0.5 *:w-5 *:bg-black m:hidden"
+            className="m:hidden flex cursor-pointer flex-col gap-1 *:h-0.5 *:w-5 *:bg-black"
             onClick={() => setPopup(!popup)}
           >
             <span></span>
@@ -104,7 +105,7 @@ export const Header = () => {
       </div>
 
       <div
-        className={`fixed top-0 z-50 flex h-screen w-screen flex-col gap-10 overflow-y-scroll bg-[#0d0628] px-12 pt-[26px] text-white transition-all duration-300 ${popup ? 'left-[0%] opacity-100' : 'left-[-110%]'}`}
+        className={`max-m:transition-all fixed top-0 z-50 flex h-screen w-screen flex-col gap-10 overflow-y-scroll bg-[#0d0628] px-12 pt-[26px] text-white duration-300 ${popup ? 'left-[0%] opacity-100' : 'left-[-110%] opacity-0'}`}
       >
         <div
           className="absolute top-5 right-5 z-50 h-6 w-6 cursor-pointer"
@@ -117,16 +118,16 @@ export const Header = () => {
         <img src="/uploads/Header/logo_yellow.svg" width="123" height="24" alt="" />
 
         <div className="flex flex-col gap-[15px]">
-          {linksPopupTop.map((item) => (
-            <a href="https://ya.ru/?npr=1" target="_blank" rel="noopener noreferrer">
+          {linksPopupTop.map((item, index) => (
+            <a key={index} href="https://ya.ru/?npr=1" target="_blank" rel="noopener noreferrer">
               {item}
             </a>
           ))}
         </div>
 
         <div className="flex flex-col gap-[15px] opacity-80">
-          {linksPopupBottom.map((item) => (
-            <a href="https://ya.ru/?npr=1" target="_blank" rel="noopener noreferrer">
+          {linksPopupBottom.map((item, index) => (
+            <a key={index} href="https://ya.ru/?npr=1" target="_blank" rel="noopener noreferrer">
               {item}
             </a>
           ))}

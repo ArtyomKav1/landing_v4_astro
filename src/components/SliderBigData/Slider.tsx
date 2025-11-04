@@ -10,8 +10,8 @@ import { slidesData } from './SliderBigData.constants';
 export const Slider = () => {
   return (
     <div className="relative h-full">
-      <div className="swiper-button-prev rounded-full transition-colors duration-300 hover:bg-white max-lg:hidden"></div>
-      <div className="swiper-button-next rounded-full transition-colors duration-300 hover:bg-white max-lg:hidden"></div>
+      <div className="swiper-button-prev rounded-full p-7 transition-colors duration-300 hover:bg-white max-lg:hidden"></div>
+      <div className="swiper-button-next rounded-full p-7 transition-colors duration-300 hover:bg-white max-lg:hidden"></div>
       <div className="pagination"></div>
 
       <Swiper
